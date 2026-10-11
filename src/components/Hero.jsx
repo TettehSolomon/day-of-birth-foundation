@@ -5,7 +5,7 @@ const CEO_IMAGE =
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden pt-12 pb-24 md:pt-24 md:pb-32 hero-pattern" id="home">
+    <section className="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 hero-pattern" id="home">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         <div className="space-y-6">
           <Reveal direction="up">
@@ -26,18 +26,20 @@ export default function Hero() {
               scholarships and academic support, we empower the next generation of leaders.
             </p>
           </Reveal>
-          <Reveal direction="up" delay={360} className="flex flex-wrap gap-4">
+          <Reveal direction="up" delay={360} className="flex gap-3 sm:gap-4">
             <a
-              className="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:translate-y-[-2px] transition-all"
+              className="flex-1 sm:flex-none text-center bg-primary text-on-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base shadow-lg hover:translate-y-[-2px] transition-all"
               href="#donate"
             >
-              Support a Student
+              <span className="sm:hidden">Support Us</span>
+              <span className="hidden sm:inline">Support a Student</span>
             </a>
             <a
-              className="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all"
+              className="flex-1 sm:flex-none text-center border-2 border-primary text-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-primary/5 transition-all"
               href="#impact"
             >
-              View Our Impact
+              <span className="sm:hidden">View Impact</span>
+              <span className="hidden sm:inline">View Our Impact</span>
             </a>
           </Reveal>
         </div>
