@@ -16,7 +16,7 @@ export default function About() {
                 He has deep passion for creating deeply memorable moments that meaningfully bring people together, and
                 this holds true whether I command a massive stage or lead a virtual event.
               </p>
-              <div className="pt-4 flex gap-4">
+              <div className="pt-4 flex flex-wrap gap-4">
                 <div className="p-3 bg-white rounded-xl shadow-sm border border-surface-variant flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
                     workspace_premium

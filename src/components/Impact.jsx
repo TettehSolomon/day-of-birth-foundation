@@ -49,10 +49,7 @@ export default function Impact() {
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               src={IMG_AUDIENCE}
             />
-            <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur p-4 rounded-2xl flex items-center justify-between">
-              <span className="font-bold text-primary">Community Growth</span>
-              <span className="material-symbols-outlined text-primary">arrow_forward</span>
-            </div>
+           
           </div>
           <div className="col-span-12 md:col-span-12 lg:col-span-3 rounded-3xl overflow-hidden shadow-md group h-[250px] relative">
             <img

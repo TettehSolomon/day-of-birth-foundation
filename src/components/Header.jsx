@@ -2,20 +2,41 @@ import { useEffect, useState } from 'react'
 import { LOGO_URL } from '../constants'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home', active: true },
+  { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Impact', href: '#impact' },
+  { label: 'Contact', href: '#contact' },
 ]
+
+const ACTIVE_CLASS = 'text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md'
+const INACTIVE_CLASS = 'text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('#home')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
     window.addEventListener('scroll', onScroll)
     onScroll()
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) => document.querySelector(link.href)).filter(Boolean)
+
+    // Highlight whichever section is crossing the vertical center of the viewport.
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting)
+        if (visible) setActiveSection(`#${visible.target.id}`)
+      },
+      { rootMargin: '-45% 0px -45% 0px', threshold: 0 },
+    )
+
+    sections.forEach((section) => observer.observe(section))
+    return () => observer.disconnect()
   }, [])
 
   return (
@@ -32,11 +53,7 @@ export default function Header() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
-              className={
-                link.active
-                  ? 'text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md'
-                  : 'text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md'
-              }
+              className={activeSection === link.href ? ACTIVE_CLASS : INACTIVE_CLASS}
               href={link.href}
             >
               {link.label}
@@ -63,7 +80,7 @@ export default function Header() {
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
-              className="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md"
+              className={activeSection === link.href ? ACTIVE_CLASS : INACTIVE_CLASS}
               href={link.href}
               onClick={() => setMenuOpen(false)}
             >

@@ -6,6 +6,9 @@ body {
   background-color: #fff8f6;
   color: #1f1b1a;
   font-family: 'Work Sans', sans-serif;
+  /* Guard against stray horizontal overflow; `clip` (unlike `hidden`)
+     does not create a scroll container, so it won't break the sticky header. */
+  overflow-x: clip;
 }
 
 .material-symbols-outlined {

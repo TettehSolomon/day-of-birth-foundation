@@ -3,17 +3,17 @@ const FLYER_IMAGE =
 
 export default function Donate() {
   return (
-    <section className="py-xl bg-primary text-white relative" id="donate">
+    <section className="py-xl bg-primary text-white relative overflow-hidden" id="donate">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 skew-x-[-15deg] transform origin-right"></div>
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-6">
             <div className="space-y-6">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 font-label-md text-label-md">
-                2024 ROADMAP
+                2026 ROADMAP
               </span>
               <h2 className="font-display-lg-mobile text-display-lg-mobile md:font-headline-md md:text-headline-md">
-                Empowering the Future: <br />2024 Goals
+                Empowering the Future: <br />2026 Goals
               </h2>
               <div className="space-y-8 mt-10">
                 <div className="flex items-start gap-5">
