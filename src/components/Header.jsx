@@ -1,12 +1,16 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { LOGO_URL } from '../constants'
 
-const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Impact', href: '#impact' },
-  { label: 'Contact', href: '#contact' },
+const NAV_ITEMS = [
+  { label: 'Home', hash: '#home' },
+  { label: 'About', hash: '#about' },
+  { label: 'Impact', hash: '#impact' },
+  { label: 'Gallery', to: '/gallery' },
+  { label: 'Contact', hash: '#contact' },
 ]
+
+const SECTION_HASHES = NAV_ITEMS.filter((item) => item.hash).map((item) => item.hash)
 
 const DESKTOP_ACTIVE = 'text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md'
 const DESKTOP_INACTIVE = 'text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md'
@@ -15,6 +19,9 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('#home')
+  const location = useLocation()
+  const navigate = useNavigate()
+  const onHome = location.pathname === '/'
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -23,8 +30,11 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Scroll-spy for the home sections — only active while on the home page.
   useEffect(() => {
-    const sections = NAV_LINKS.map((link) => document.querySelector(link.href)).filter(Boolean)
+    if (!onHome) return
+
+    const sections = SECTION_HASHES.map((hash) => document.querySelector(hash)).filter(Boolean)
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -36,7 +46,7 @@ export default function Header() {
 
     sections.forEach((section) => observer.observe(section))
     return () => observer.disconnect()
-  }, [])
+  }, [onHome])
 
   // Mobile drawer: close on Escape, lock body scroll while open.
   useEffect(() => {
@@ -51,6 +61,18 @@ export default function Header() {
 
   const close = () => setMenuOpen(false)
 
+  const goToSection = (hash) => {
+    close()
+    if (onHome) {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' })
+      window.history.replaceState(null, '', hash)
+    } else {
+      navigate('/' + hash)
+    }
+  }
+
+  const isActive = (item) => (item.to ? location.pathname === item.to : onHome && activeSection === item.hash)
+
   return (
     <>
       <header
@@ -59,22 +81,43 @@ export default function Header() {
         }`}
       >
         <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-          <a href="#home" className="flex items-center gap-2">
+          <a
+            href="#home"
+            onClick={(e) => {
+              e.preventDefault()
+              goToSection('#home')
+            }}
+            className="flex items-center gap-2"
+          >
             <img alt="Day of Birth Foundation Logo" className="h-10 md:h-14 object-contain" src={LOGO_URL} />
           </a>
           <div className="hidden md:flex gap-8 items-center">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                className={activeSection === link.href ? DESKTOP_ACTIVE : DESKTOP_INACTIVE}
-                href={link.href}
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_ITEMS.map((item) =>
+              item.to ? (
+                <Link key={item.label} to={item.to} onClick={close} className={isActive(item) ? DESKTOP_ACTIVE : DESKTOP_INACTIVE}>
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.hash}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    goToSection(item.hash)
+                  }}
+                  className={isActive(item) ? DESKTOP_ACTIVE : DESKTOP_INACTIVE}
+                >
+                  {item.label}
+                </a>
+              ),
+            )}
             <a
               className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
               href="#donate"
+              onClick={(e) => {
+                e.preventDefault()
+                goToSection('#donate')
+              }}
             >
               Donate
             </a>
@@ -130,24 +173,37 @@ export default function Header() {
         </div>
 
         <nav className="flex flex-col px-margin-mobile py-md gap-sm">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              onClick={close}
-              className={`rounded-xl px-4 py-3 transition-colors font-label-md text-label-md ${
-                activeSection === link.href
-                  ? 'text-primary font-bold bg-surface-container'
-                  : 'text-on-surface hover:text-primary hover:bg-surface-container'
-              }`}
-              href={link.href}
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const cls = `rounded-xl px-4 py-3 transition-colors font-label-md text-label-md ${
+              isActive(item)
+                ? 'text-primary font-bold bg-surface-container'
+                : 'text-on-surface hover:text-primary hover:bg-surface-container'
+            }`
+            return item.to ? (
+              <Link key={item.label} to={item.to} onClick={close} className={cls}>
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.label}
+                href={item.hash}
+                onClick={(e) => {
+                  e.preventDefault()
+                  goToSection(item.hash)
+                }}
+                className={cls}
+              >
+                {item.label}
+              </a>
+            )
+          })}
 
           <a
             href="#donate"
-            onClick={close}
+            onClick={(e) => {
+              e.preventDefault()
+              goToSection('#donate')
+            }}
             className="mt-md bg-secondary text-on-primary text-center px-6 py-3 rounded-full font-bold hover:bg-secondary/90 transition-all active:scale-95 shadow-lg font-label-md text-label-md"
           >
             Donate

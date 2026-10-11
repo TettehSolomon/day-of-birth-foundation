@@ -59,27 +59,6 @@ export default function Donate() {
                 className="w-full rounded-2xl border border-surface-variant"
                 src={FLYER_IMAGE}
               />
-              <div className="mt-8 flex flex-col md:flex-row gap-6 items-center border-t border-surface-variant pt-8">
-                <div className="text-on-surface">
-                  <p className="font-label-md text-label-md opacity-60">SCAN FOR RECAP</p>
-                  <p className="font-bold text-sm">Last Year's Event</p>
-                </div>
-                <div className="flex-grow"></div>
-                <div className="flex gap-4">
-                  <a
-                    className="p-3 bg-surface-container rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
-                    href="#"
-                  >
-                    <span className="material-symbols-outlined">share</span>
-                  </a>
-                  <a
-                    className="p-3 bg-surface-container rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
-                    href="#"
-                  >
-                    <span className="material-symbols-outlined">chat</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </Reveal>
         </div>
