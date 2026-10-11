@@ -1,0 +1,3 @@
+// Shared asset references used across components.
+export const LOGO_URL =
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuBfrZT7QXtPfvCoY-Fj0V5usK7MUc1A01plWmH_tH_6DKCoYmZkk8XB7t0qYkDkqXgJ0Gta46LJax9t5RPoZvhXH1UNGG6ScdJAJIl8CCR-9qOBXCaFU_Ah55c6hFjSfdR0jD4q4mvbigBteQ6U1lMwDNgOWF9q1IaXmjyjjZv9bz7DhYxw1zlJXxvzkenhObk_P9bJarR_TG7Q_8EeL-vRIfOiQCuy4NfYgDASKF4Oo5sx-hu1RN0H0WHM4xkopxkUp_IFONA0dJtc'
