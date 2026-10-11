@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const FLYER_IMAGE =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuCu-5BG6mc69zCBW4-0NxXzzAeTMawQVh_4ShYzfi0aGb6ccyRbLfjv60ablL2tSZU8jVfhTZ-FJD9cIfrwc5LGQBqYbtazkHBvnJk3FJWh3uruJsmbfEw9iaJplk4u5teeV8kmiL8iKXV0__moSbyX6UsOqYZk850ny75oc1UogpM0JelxogjdxcQYQSPDk_LFW4cdauF0U6zcn3_5m3pBkzknKlEKtJQtVTpkakAToKc8VnJPD4JRRAVap-zipVXjcBDIiJz3OyEt'
 
@@ -7,7 +9,7 @@ export default function Donate() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 skew-x-[-15deg] transform origin-right"></div>
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6">
+          <Reveal direction="left" className="lg:col-span-6">
             <div className="space-y-6">
               <span className="inline-block px-4 py-1 rounded-full bg-white/20 font-label-md text-label-md">
                 2026 ROADMAP
@@ -46,8 +48,8 @@ export default function Donate() {
                 Donate Now
               </button>
             </div>
-          </div>
-          <div className="lg:col-span-6">
+          </Reveal>
+          <Reveal direction="right" delay={150} className="lg:col-span-6">
             <div className="relative bg-white rounded-[2rem] p-4 md:p-8 shadow-2xl">
               <div className="absolute -top-4 -right-4 bg-secondary text-white p-4 rounded-2xl shadow-lg z-20 font-bold">
                 ₦5M GOAL
@@ -79,7 +81,7 @@ export default function Donate() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

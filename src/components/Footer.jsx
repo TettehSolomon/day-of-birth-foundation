@@ -1,4 +1,5 @@
 import { LOGO_URL } from '../constants'
+import Reveal from './Reveal'
 
 const QUICK_LINKS = ['Contact Us', 'Privacy Policy', 'Terms of Service', 'Donate']
 
@@ -6,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-inverse-surface dark:bg-surface-container-highest bg-[#eb7d4d]">
       <div className="w-full py-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-7xl mx-auto">
-        <div className="space-y-6">
+        <Reveal direction="up" className="space-y-6">
           <img alt="Day of Birth Foundation" className="h-12 brightness-0 invert" src={LOGO_URL} />
           <p className="font-body-md text-body-md text-surface-variant">
             Transforming lives through educational empowerment across Nigeria. Join us in building a future where every
@@ -17,8 +18,8 @@ export default function Footer() {
             <span className="material-symbols-outlined text-surface-variant">public</span>
             <span className="material-symbols-outlined text-surface-variant">alternate_email</span>
           </div>
-        </div>
-        <div className="space-y-4">
+        </Reveal>
+        <Reveal direction="up" delay={120} className="space-y-4">
           <h4 className="font-title-lg text-title-lg text-surface">Quick Links</h4>
           <ul className="space-y-2">
             {QUICK_LINKS.map((label) => (
@@ -32,8 +33,8 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="space-y-4">
+        </Reveal>
+        <Reveal direction="up" delay={240} className="space-y-4">
           <h4 className="font-title-lg text-title-lg text-surface">Newsletter</h4>
           <p className="font-body-md text-body-md text-surface-variant">
             Stay updated with our latest impact stories and donation goals.
@@ -46,7 +47,7 @@ export default function Footer() {
             />
             <button className="bg-secondary text-white px-4 py-2 rounded-xl font-bold">Join</button>
           </div>
-        </div>
+        </Reveal>
       </div>
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-surface-variant/10 text-center">
         <p className="font-label-md text-label-md text-surface-variant">

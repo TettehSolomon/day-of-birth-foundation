@@ -1,18 +1,20 @@
+import Reveal from './Reveal'
+
 export default function About() {
   return (
     <section className="py-xl bg-surface-container/50" id="about">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-5 order-2 lg:order-1">
+          <Reveal direction="left" className="lg:col-span-5 order-2 lg:order-1">
             <div className="space-y-4">
               <h2 className="font-headline-md text-headline-md text-on-surface">Meet Our Visionary</h2>
-              <p className="font-body-md text-body-md text-tertiary">
+              <p className="font-body-md text-body-md text-justify text-tertiary">
                 Elton is the ceo/founder of the Day Of Birth Foundation, a foundation that helps empower students
                 across Nigeria with scholarships. He is also your go-to compere for tech events and conferences –
                 energizing the crowd, creating a welcoming atmosphere, and transforming ordinary gatherings into
                 unforgettable experiences.
               </p>
-              <p className="font-body-md text-body-md text-tertiary">
+              <p className="font-body-md text-body-md text-justify text-tertiary">
                 He has deep passion for creating deeply memorable moments that meaningfully bring people together, and
                 this holds true whether I command a massive stage or lead a virtual event.
               </p>
@@ -37,8 +39,8 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="lg:col-span-7 order-1 lg:order-2">
+          </Reveal>
+          <Reveal direction="right" delay={150} className="lg:col-span-7 order-1 lg:order-2">
             <div className="relative rounded-3xl overflow-hidden aspect-video shadow-xl group">
               <img
                 alt="CEO Elton addressing the students"
@@ -51,7 +53,7 @@ export default function About() {
                 <h3 className="font-title-lg text-title-lg">Energizing the Future Generation</h3>
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
