@@ -23,7 +23,7 @@ export default function Contact() {
             <span className="material-symbols-outlined text-[18px]">connect_without_contact</span>
             Get Involved
           </span>
-          <h2 className="font-headline-md text-headline-md text-on-surface mt-4 mb-4">
+          <h2 className="font-headline-md text-2xl font-semibold sm:text-headline-md text-on-surface mt-4 mb-4">
             Donation, Volunteering &amp; Partnership
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
@@ -89,7 +89,7 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-gutter h-full">
               {INVOLVEMENT.map((item, i) => (
                 <Reveal key={item.label} direction="up" delay={i * 120} className="h-full">
-                  <div className="h-full bg-white rounded-3xl p-6 shadow-sm border border-surface-variant hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col gap-3">
+                  <div className="h-full bg-white rounded-3xl p-6 shadow-sm border border-surface-variant hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col gap-3 items-center text-center sm:items-start sm:text-left">
                     <div className="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-2xl">
                       <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                         {item.icon}

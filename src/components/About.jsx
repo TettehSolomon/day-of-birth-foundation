@@ -2,10 +2,10 @@ import Reveal from './Reveal'
 
 export default function About() {
   return (
-    <section className="py-xl bg-surface-container/50" id="about">
+    <section className="pt-lg pb-xl bg-surface-container/50" id="about">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <Reveal direction="left" className="lg:col-span-5 order-2 lg:order-1">
+          <Reveal direction="left" className="lg:col-span-5 order-1">
             <div className="space-y-4">
               <h2 className="font-headline-md text-headline-md text-on-surface text-center lg:text-left">Meet Our Visionary</h2>
               <p className="font-body-md text-body-md text-justify text-tertiary">
@@ -18,9 +18,9 @@ export default function About() {
                 He has deep passion for creating deeply memorable moments that meaningfully bring people together, and
                 this holds true whether I command a massive stage or lead a virtual event.
               </p>
-              <div className="pt-4 flex flex-wrap gap-4">
-                <div className="p-3 bg-white rounded-xl shadow-sm border border-surface-variant flex items-center gap-3">
-                  <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>
+              <div className="pt-4 flex gap-2 sm:gap-4">
+                <div className="flex-1 min-w-0 p-2.5 sm:p-3 bg-white rounded-xl shadow-sm border border-surface-variant flex items-center gap-2 sm:gap-3">
+                  <span className="material-symbols-outlined text-primary text-xl sm:text-2xl shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                     workspace_premium
                   </span>
                   <div>
@@ -28,8 +28,8 @@ export default function About() {
                     <div className="text-xs text-tertiary">Scholarships awarded</div>
                   </div>
                 </div>
-                <div className="p-3 bg-white rounded-xl shadow-sm border border-surface-variant flex items-center gap-3">
-                  <span className="material-symbols-outlined text-secondary" style={{ fontVariationSettings: "'FILL' 1" }}>
+                <div className="flex-1 min-w-0 p-2.5 sm:p-3 bg-white rounded-xl shadow-sm border border-surface-variant flex items-center gap-2 sm:gap-3">
+                  <span className="material-symbols-outlined text-secondary text-xl sm:text-2xl shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>
                     volunteer_activism
                   </span>
                   <div>
@@ -40,7 +40,7 @@ export default function About() {
               </div>
             </div>
           </Reveal>
-          <Reveal direction="right" delay={150} className="lg:col-span-7 order-1 lg:order-2">
+          <Reveal direction="right" delay={150} className="lg:col-span-7 order-2">
             <div className="relative rounded-3xl overflow-hidden aspect-video shadow-xl group">
               <img
                 alt="CEO Elton addressing the students"

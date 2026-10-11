@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-8 pb-16 md:pt-16 md:pb-24 hero-pattern" id="home">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           <Reveal direction="up">
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full text-primary font-label-md text-label-md">
               <span className="material-symbols-outlined text-[18px]">verified</span>

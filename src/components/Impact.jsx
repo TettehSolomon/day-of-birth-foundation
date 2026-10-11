@@ -11,10 +11,17 @@ const IMG_AUDIENCE =
 
 export default function Impact() {
   return (
-    <section className="py-xl overflow-hidden" id="impact">
+    <section className="pt-lg pb-xl overflow-hidden" id="impact">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
         <Reveal direction="up" className="text-center mb-16">
-          <h2 className="font-headline-md text-headline-md text-on-surface mb-4">Our Impact: 2025 Recap</h2>
+          <h2 className="font-headline-md text-headline-md text-on-surface mb-4">
+            <span className="sm:hidden">
+              Our Impact
+              <br />
+              (2025 Recap)
+            </span>
+            <span className="hidden sm:inline">Our Impact: 2025 Recap</span>
+          </h2>
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
           <p className="font-body-md text-body-md text-tertiary max-w-2xl mx-auto">
             Last year, we empowered 30 students with 100k scholarships each. Every smile represents a dream sustained
