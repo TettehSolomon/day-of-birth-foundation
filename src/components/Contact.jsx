@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import { WhatsAppIcon } from './icons'
 
 const CONTACT_PERSON = 'Ofe'
 const PHONE_DISPLAY = '+234 (902) 932 2866'
@@ -39,7 +40,7 @@ export default function Contact() {
             className="lg:col-span-5 bg-primary text-white rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden"
           >
             <div className="absolute -bottom-16 -right-16 w-56 h-56 bg-white/5 rounded-full"></div>
-            <h3 className="font-title-lg text-title-lg mb-8 relative">Reach Out Directly</h3>
+            <h3 className="font-title-lg text-title-lg mb-8 relative text-center lg:text-left">Reach Out Directly</h3>
             <div className="space-y-6 relative">
               <div className="flex items-center gap-4">
                 <div className="p-3 bg-white/10 rounded-2xl backdrop-blur shrink-0">
@@ -47,7 +48,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-white/70">Contact Person</p>
-                  <p className="font-bold">{CONTACT_PERSON}</p>
+                  <p className="font-bold text-sm">{CONTACT_PERSON}</p>
                 </div>
               </div>
 
@@ -57,7 +58,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-white/70">Call / WhatsApp</p>
-                  <p className="font-bold">{PHONE_DISPLAY}</p>
+                  <p className="font-bold text-sm">{PHONE_DISPLAY}</p>
                 </div>
               </a>
 
@@ -67,7 +68,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-label-md text-label-md text-white/70">Email Us</p>
-                  <p className="font-bold break-all">{EMAIL}</p>
+                  <p className="font-bold text-sm break-all">{EMAIL}</p>
                 </div>
               </a>
             </div>
@@ -76,11 +77,9 @@ export default function Contact() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noreferrer"
-              className="mt-10 inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface transition-colors relative"
+              className="mt-10 flex w-fit mx-auto lg:mx-0 items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface transition-colors relative"
             >
-              <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
-                chat
-              </span>
+              <WhatsAppIcon className="w-5 h-5" />
               Chat on WhatsApp
             </a>
           </Reveal>

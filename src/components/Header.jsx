@@ -8,8 +8,8 @@ const NAV_LINKS = [
   { label: 'Contact', href: '#contact' },
 ]
 
-const ACTIVE_CLASS = 'text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md'
-const INACTIVE_CLASS = 'text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md'
+const DESKTOP_ACTIVE = 'text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md'
+const DESKTOP_INACTIVE = 'text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -26,7 +26,6 @@ export default function Header() {
   useEffect(() => {
     const sections = NAV_LINKS.map((link) => document.querySelector(link.href)).filter(Boolean)
 
-    // Highlight whichever section is crossing the vertical center of the viewport.
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.find((entry) => entry.isIntersecting)
@@ -39,63 +38,122 @@ export default function Header() {
     return () => observer.disconnect()
   }, [])
 
+  // Mobile drawer: close on Escape, lock body scroll while open.
+  useEffect(() => {
+    const onKey = (e) => e.key === 'Escape' && setMenuOpen(false)
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
+  const close = () => setMenuOpen(false)
+
   return (
-    <header
-      className={`bg-surface/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'shadow-md py-2' : 'py-4'
-      }`}
-    >
-      <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
-        <div className="flex items-center gap-2">
-          <img alt="Day of Birth Foundation Logo" className="h-10 md:h-14 object-contain" src={LOGO_URL} />
+    <>
+      <header
+        className={`bg-surface/80 backdrop-blur-md sticky top-0 z-50 transition-all duration-300 ${
+          scrolled ? 'shadow-md py-2' : 'py-4'
+        }`}
+      >
+        <nav className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto">
+          <a href="#home" className="flex items-center gap-2">
+            <img alt="Day of Birth Foundation Logo" className="h-10 md:h-14 object-contain" src={LOGO_URL} />
+          </a>
+          <div className="hidden md:flex gap-8 items-center">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                className={activeSection === link.href ? DESKTOP_ACTIVE : DESKTOP_INACTIVE}
+                href={link.href}
+              >
+                {link.label}
+              </a>
+            ))}
+            <a
+              className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
+              href="#donate"
+            >
+              Donate
+            </a>
+          </div>
+
+          {/* Animated hamburger → X */}
+          <button
+            className="md:hidden p-2 relative w-10 h-10 flex items-center justify-center text-primary"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
+          >
+            <span className="relative block w-6 h-5">
+              <span
+                className={`absolute left-0 top-0 h-[2.5px] w-full bg-current rounded-full transition-all duration-300 origin-center ${
+                  menuOpen ? 'translate-y-[9px] rotate-45' : ''
+                }`}
+              />
+              <span
+                className={`absolute right-0 top-1/2 -translate-y-1/2 h-[2.5px] bg-current rounded-full transition-all duration-300 ${
+                  menuOpen ? 'w-0 opacity-0' : 'w-full opacity-100'
+                }`}
+              />
+              <span
+                className={`absolute left-0 bottom-0 h-[2.5px] w-full bg-current rounded-full transition-all duration-300 origin-center ${
+                  menuOpen ? '-translate-y-[9px] -rotate-45' : ''
+                }`}
+              />
+            </span>
+          </button>
+        </nav>
+      </header>
+
+      {/* Dimmed backdrop */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
+          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={close}
+        aria-hidden="true"
+      />
+
+      {/* Slide-in drawer */}
+      <aside
+        className={`md:hidden fixed top-0 left-0 z-[9999] h-full w-[78%] max-w-xs bg-surface shadow-2xl transform transition-transform duration-300 ease-out ${
+          menuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="flex items-center gap-2 px-margin-mobile py-4 border-b border-surface-variant">
+          <img alt="Day of Birth Foundation Logo" className="h-10 object-contain" src={LOGO_URL} />
         </div>
-        <div className="hidden md:flex gap-8 items-center">
+
+        <nav className="flex flex-col px-margin-mobile py-md gap-sm">
           {NAV_LINKS.map((link) => (
             <a
               key={link.href}
-              className={activeSection === link.href ? ACTIVE_CLASS : INACTIVE_CLASS}
+              onClick={close}
+              className={`rounded-xl px-4 py-3 transition-colors font-label-md text-label-md ${
+                activeSection === link.href
+                  ? 'text-primary font-bold bg-surface-container'
+                  : 'text-on-surface hover:text-primary hover:bg-surface-container'
+              }`}
               href={link.href}
             >
               {link.label}
             </a>
           ))}
+
           <a
-            className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
             href="#donate"
+            onClick={close}
+            className="mt-md bg-secondary text-on-primary text-center px-6 py-3 rounded-full font-bold hover:bg-secondary/90 transition-all active:scale-95 shadow-lg font-label-md text-label-md"
           >
             Donate
           </a>
-        </div>
-        <button
-          className="md:hidden text-primary"
-          onClick={() => setMenuOpen((open) => !open)}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-        >
-          <span className="material-symbols-outlined">{menuOpen ? 'close' : 'menu'}</span>
-        </button>
-      </nav>
-      {menuOpen && (
-        <div className="md:hidden px-margin-mobile pb-4 flex flex-col gap-4">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              className={activeSection === link.href ? ACTIVE_CLASS : INACTIVE_CLASS}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </a>
-          ))}
-          <a
-            className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold text-center font-label-md text-label-md"
-            href="#donate"
-            onClick={() => setMenuOpen(false)}
-          >
-            Donate
-          </a>
-        </div>
-      )}
-    </header>
+        </nav>
+      </aside>
+    </>
   )
 }

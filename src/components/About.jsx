@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <Reveal direction="left" className="lg:col-span-5 order-2 lg:order-1">
             <div className="space-y-4">
-              <h2 className="font-headline-md text-headline-md text-on-surface">Meet Our Visionary</h2>
+              <h2 className="font-headline-md text-headline-md text-on-surface text-center lg:text-left">Meet Our Visionary</h2>
               <p className="font-body-md text-body-md text-justify text-tertiary">
                 Elton is the ceo/founder of the Day Of Birth Foundation, a foundation that helps empower students
                 across Nigeria with scholarships. He is also your go-to compere for tech events and conferences –

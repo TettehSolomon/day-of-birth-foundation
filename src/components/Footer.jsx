@@ -5,7 +5,7 @@ const QUICK_LINKS = ['Contact Us', 'Privacy Policy', 'Terms of Service', 'Donate
 
 export default function Footer() {
   return (
-    <footer className="bg-inverse-surface dark:bg-surface-container-highest bg-[#eb7d4d]">
+    <footer className="bg-secondary">
       <div className="w-full py-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-7xl mx-auto">
         <Reveal direction="up" className="space-y-6">
           <img alt="Day of Birth Foundation" className="h-12 brightness-0 invert" src={LOGO_URL} />
@@ -45,11 +45,11 @@ export default function Footer() {
               placeholder="Your email"
               type="email"
             />
-            <button className="bg-secondary text-white px-4 py-2 rounded-xl font-bold">Join</button>
+            <button className="bg-[#eb7d4d] text-white px-4 py-2 rounded-xl font-bold">Join</button>
           </div>
         </Reveal>
       </div>
-      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-surface-variant/10 text-center">
+      <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-white/30 text-center">
         <p className="font-label-md text-label-md text-surface-variant">
           © 2026 Day of Birth Foundation. All rights reserved.
         </p>
