@@ -1,13 +1,15 @@
 import Reveal from './Reveal'
 
 const IMG_CEREMONY =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDGQifbGFIF6KGcVsfpJe0CY1A0mIIVoq1_VDsJ6CtoPoyxQt2PKOPRf6kKPwiE4of6MSnqF7ul5V1i-RiLVzmNnTiVrrIDcWnooKpBXPUKqoyMObE10JiOc0tHPI00wnv9atoyiKwEyXsrYxpdtejfcthYc4JHuOJSFn1c8lCX5N2Ut4DkC7-467fQyUMMrPqs0bWUo20h2O2IhFM0q4XKeLf3kISdTJu-Txb5EtpNINWMsBIplfpYB1tWODMQJ8FU4Nyc_6SL1fcM'
+  './images/img2.jpg'
 const IMG_AWARD =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDpX23rrRGczB_NsrtxqtDPFP4-1dlzv29nCBoEV5YKJUWpRCEdIRG7_BCCP71rL7ABH6eW5g-UMKWV2JJ2Av9bOFisP5irI-634NS9irwlZo0RruJp7TOp2HwHoKbqziUoXmInrxPeDgm--39SUqs0TCZ3OfSgzGpI8kOXGsPFzh6NUaexqfjek1F1Uk-BytfIRK6zVP4NIplSyuZhailVy3bLLCqzeRUBKZNms6jOrK5OgP-OrM1xqXhWfD_RojCJ21RzW9yLfMiO'
+  './images/img9.jpg'
 const IMG_GRANT =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCaHq3Qmyleu2OCd6JvPVczrhFJ-J328slMEkdvD_YHo69C6jmDdGqaODyLk5Wrs7cAVAp0EDWfg_5SnkaPoDR4jHhbo1k4KqUphG879TBEEWvZhJ73EZYkR4KDMX3CUVj-tmvzEq7ASdsFMA6elhssUOxZ6FddTM7UemC7ezeKF881Oo1mWG0_Gebe9PRMy7LHqbA-pBzaaqak1LPFobHXx7hii1uywgpXTebc_ZFQHFjNOiIb-mmiteW7MFB2zwl8FqALNWeR6x19'
+  './images/img7.jpg'
 const IMG_AUDIENCE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuAzVU-Gpcbt9JPPgWYXbvlyXMf7Suh-Uw-uEN3NUpMZ4bO2K3UkUgPhNNAqon2faupQAaQUb6vrYSseRbvJPDAr4KR2JdMgJtq8egF1yjD7CjQ0gi9z8Rxo8DXgoNt5jcbtiLgOfnmFo7a4ASPPuGd1BRdy6SDPIsAWGBJhl-mTt3Y7I6UJcTrvV8IphgRnfXH_di970lpTpZdfdkykld4bjpKgcwEV46SQ8C-u-J8ekUGllP1t6w-_HdUi6EYL785ZRKcUiUVtk1p5'
+  './images/img8.jpg'
+const IMG_SPEAKER =
+  './images/img20.jpg'
 
 export default function Impact() {
   return (
@@ -86,7 +88,7 @@ export default function Impact() {
             <img
               alt="Audience of beneficiaries"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-              src={IMG_AUDIENCE}
+              src={IMG_SPEAKER}
             />
           </Reveal>
         </div>
