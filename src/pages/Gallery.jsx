@@ -1,16 +1,21 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Reveal from '../components/Reveal'
 
-// All available images except the CEO portrait and the flyer.
-const GALLERY_IMAGES = Array.from({ length: 26 }, (_, i) => `/images/img${i + 1}.jpg`)
+// Candidate image paths. Any that don't exist are dropped automatically on load,
+// so removing a file from /images simply removes it from the gallery.
+const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => `/images/img${i + 1}.jpg`)
 
 const DRIVE_URL = 'https://drive.google.com/drive/folders/1lYGgE_sRG4N3QrGY4sJdrFnkde8RaYYJ'
 
 export default function Gallery() {
+  const [broken, setBroken] = useState(() => new Set())
+
   // Start at the top when landing on the page.
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+  const visibleImages = GALLERY_IMAGES.filter((src) => !broken.has(src))
 
   return (
     <main>
@@ -39,12 +44,13 @@ export default function Gallery() {
       <section className="pb-xl">
         <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-6">
-            {GALLERY_IMAGES.map((src, i) => (
+            {visibleImages.map((src, i) => (
               <Reveal key={src} direction="up" delay={(i % 3) * 90} className="mb-6 break-inside-avoid">
                 <img
                   src={src}
                   alt={`Day of Birth Foundation moment ${i + 1}`}
                   loading="lazy"
+                  onError={() => setBroken((prev) => new Set(prev).add(src))}
                   className="w-full rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
                 />
               </Reveal>
