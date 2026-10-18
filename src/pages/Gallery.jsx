@@ -5,7 +5,7 @@ import Reveal from '../components/Reveal'
 // so removing a file from /images simply removes it from the gallery.
 const GALLERY_IMAGES = Array.from({ length: 30 }, (_, i) => `/images/img${i + 1}.jpg`)
 
-const DRIVE_URL = 'https://drive.google.com/drive/folders/1lYGgE_sRG4N3QrGY4sJdrFnkde8RaYYJ'
+const DRIVE_URL = ''
 
 export default function Gallery() {
   const [broken, setBroken] = useState(() => new Set())
