@@ -57,6 +57,7 @@ export default function Gallery() {
             ))}
           </div>
 
+          {/*
           <Reveal direction="up" className="mt-12 flex justify-center">
             <a
               href={DRIVE_URL}
@@ -67,6 +68,7 @@ export default function Gallery() {
               <span className="material-symbols-outlined">arrow_outward</span>
             </a>
           </Reveal>
+          */}
         </div>
       </section>
     </main>
