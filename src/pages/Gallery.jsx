@@ -60,7 +60,6 @@ export default function Gallery() {
           <Reveal direction="up" className="mt-12 flex justify-center">
             <a
               href={DRIVE_URL}
-              target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-on-primary px-8 py-4 rounded-xl font-bold shadow-lg hover:translate-y-[-2px] transition-all"
             >
