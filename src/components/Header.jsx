@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { label: 'About', hash: '#about' },
   { label: 'Impact', hash: '#impact' },
   { label: 'Gallery', to: '/gallery' },
+  { label: 'Videos', to: '/videos' },
   { label: 'Contact', hash: '#contact' },
 ]
 
@@ -91,7 +92,7 @@ export default function Header() {
           >
             <img alt="Day of Birth Foundation Logo" className="h-10 md:h-14 object-contain" src={LOGO_URL} />
           </a>
-          <div className="hidden md:flex gap-8 items-center">
+          <div className="hidden lg:flex gap-6 items-center">
             {NAV_ITEMS.map((item) =>
               item.to ? (
                 <Link key={item.label} to={item.to} onClick={close} className={isActive(item) ? DESKTOP_ACTIVE : DESKTOP_INACTIVE}>
@@ -125,7 +126,7 @@ export default function Header() {
 
           {/* Animated hamburger → X */}
           <button
-            className="md:hidden p-2 relative w-10 h-10 flex items-center justify-center text-primary"
+            className="lg:hidden p-2 relative w-10 h-10 flex items-center justify-center text-primary"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label={menuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={menuOpen}
@@ -153,7 +154,7 @@ export default function Header() {
 
       {/* Dimmed backdrop */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 z-40 bg-primary/40 backdrop-blur-sm transition-opacity duration-300 ${
           menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onClick={close}
@@ -162,7 +163,7 @@ export default function Header() {
 
       {/* Slide-in drawer */}
       <aside
-        className={`md:hidden fixed top-0 left-0 z-[9999] h-full w-[78%] max-w-xs bg-surface shadow-2xl transform transition-transform duration-300 ease-out ${
+        className={`lg:hidden fixed top-0 left-0 z-[9999] h-full w-[78%] max-w-xs bg-surface shadow-2xl transform transition-transform duration-300 ease-out ${
           menuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         role="dialog"
