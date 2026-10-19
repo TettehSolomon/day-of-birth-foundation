@@ -43,7 +43,7 @@ export default function Videos() {
             {VIDEOS.map((video, i) => (
               <Reveal key={video.file} direction="up" delay={(i % 4) * 100}>
                 <div className="group h-full bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-surface-variant">
-                  <div className="aspect-video bg-inverse-surface">
+                  <div className="aspect-square bg-inverse-surface">
                     <video
                       className="w-full h-full object-contain"
                       controls
