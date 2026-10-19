@@ -43,7 +43,7 @@ export default function Contact() {
             <h3 className="font-title-lg text-title-lg mb-8 relative text-center lg:text-left">Reach Out Directly</h3>
             <div className="space-y-6 relative">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-white/10 rounded-2xl backdrop-blur shrink-0">
+                <div className="p-3 bg-secondary rounded-2xl shrink-0">
                   <span className="material-symbols-outlined">person</span>
                 </div>
                 <div>
@@ -53,7 +53,7 @@ export default function Contact() {
               </div>
 
               <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-4 group">
-                <div className="p-3 bg-white/10 rounded-2xl backdrop-blur shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="p-3 bg-secondary rounded-2xl shrink-0 group-hover:bg-secondary/80 transition-colors">
                   <span className="material-symbols-outlined">call</span>
                 </div>
                 <div>
@@ -63,7 +63,7 @@ export default function Contact() {
               </a>
 
               <a href={`mailto:${EMAIL}`} className="flex items-center gap-4 group">
-                <div className="p-3 bg-white/10 rounded-2xl backdrop-blur shrink-0 group-hover:bg-white/20 transition-colors">
+                <div className="p-3 bg-secondary rounded-2xl shrink-0 group-hover:bg-secondary/80 transition-colors">
                   <span className="material-symbols-outlined">mail</span>
                 </div>
                 <div>

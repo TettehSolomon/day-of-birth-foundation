@@ -25,7 +25,7 @@ export default function Footer() {
             {QUICK_LINKS.map((label) => (
               <li key={label}>
                 <a
-                  className="text-surface-variant hover:text-secondary-fixed transition-colors font-label-md text-label-md"
+                  className="text-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
                   href="#"
                 >
                   {label}
@@ -41,7 +41,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-2">
             <input
-              className="bg-surface/10 border-surface/20 text-white rounded-xl px-4 py-2 w-full focus:ring-primary"
+              className="bg-white/10 border border-white/25 text-white placeholder:text-white/50 rounded-xl px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-primary"
               placeholder="Your email"
               type="email"
             />

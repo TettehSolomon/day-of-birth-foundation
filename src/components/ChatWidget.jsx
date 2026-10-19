@@ -37,7 +37,7 @@ export default function ChatWidget() {
         onClick={() => setOpen((prev) => !prev)}
         aria-label="Toggle contact options"
         aria-expanded={open}
-        className="w-14 h-14 grid place-items-center rounded-full bg-black text-white shadow-lg hover:scale-105 transition-transform"
+        className="w-14 h-14 grid place-items-center rounded-full bg-inverse-surface text-white shadow-lg hover:scale-105 transition-transform"
       >
         <span className="material-symbols-outlined text-[26px]">{open ? 'close' : 'forum'}</span>
       </button>

@@ -9,11 +9,11 @@ export default {
     extend: {
       colors: {
         'on-secondary-fixed': '#351000',
-        surface: '#fff8f6',
+        surface: '#ffffff',
         'error-container': '#ffdad6',
         'secondary-container': '#fe8d56',
         'primary-container': '#339cc5',
-        'surface-variant': '#eae1de',
+        'surface-variant': '#e4e4e7',
         'tertiary-container': '#9c8f8b',
         'inverse-on-surface': '#f8efed',
         // Brand palette (Brand Guidelines 2026)
@@ -21,12 +21,12 @@ export default {
         'surface-tint': '#319fcc',
         secondary: '#e97d49', // Peach
         'inverse-surface': '#231f20', // Black — dark panels
-        tertiary: '#675c58',
+        tertiary: '#52525b', // Neutral gray — muted text
         'on-surface': '#231f20', // Black — body text
-        background: '#fff8f6',
+        background: '#ffffff',
         'on-primary': '#ffffff',
         outline: '#6f787f',
-        'surface-container': '#f5ecea',
+        'surface-container': '#f4f4f5',
       },
       borderRadius: {
         DEFAULT: '0.25rem',
@@ -46,10 +46,10 @@ export default {
         sm: '12px',
       },
       fontFamily: {
-        // Brand: Montserrat (primary / headings), Raleway (secondary / body).
-        'headline-md': ['Montserrat', 'sans-serif'],
-        'title-lg': ['Montserrat', 'sans-serif'],
-        'display-lg': ['Montserrat', 'sans-serif'],
+        // Brand: Poppins (primary / headings), Raleway (secondary / body).
+        'headline-md': ['Poppins', 'sans-serif'],
+        'title-lg': ['Poppins', 'sans-serif'],
+        'display-lg': ['Poppins', 'sans-serif'],
         'body-md': ['Raleway', 'sans-serif'],
         'label-md': ['Raleway', 'sans-serif'],
       },

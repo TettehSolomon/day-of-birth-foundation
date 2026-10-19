@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #fff8f6;
+  background-color: #ffffff;
   color: #231f20;
   font-family: 'Raleway', sans-serif;
   /* Guard against stray horizontal overflow; `clip` (unlike `hidden`)
