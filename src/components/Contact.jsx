@@ -37,7 +37,7 @@ export default function Contact() {
           {/* Direct contact details */}
           <Reveal
             direction="left"
-            className="lg:col-span-5 bg-primary text-white rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden"
+            className="lg:col-span-5 bg-inverse-surface text-white rounded-3xl p-8 md:p-10 shadow-xl relative overflow-hidden"
           >
             <div className="absolute -bottom-16 -right-16 w-56 h-56 bg-white/5 rounded-full"></div>
             <h3 className="font-title-lg text-title-lg mb-8 relative text-center lg:text-left">Reach Out Directly</h3>

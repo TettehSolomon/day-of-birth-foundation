@@ -5,7 +5,7 @@ const FLYER_IMAGE =
 
 export default function Donate() {
   return (
-    <section className="pt-lg pb-xl bg-primary text-white relative overflow-hidden" id="donate">
+    <section className="pt-lg pb-xl bg-inverse-surface text-white relative overflow-hidden" id="donate">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-secondary/10 skew-x-[-15deg] transform origin-right"></div>
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">

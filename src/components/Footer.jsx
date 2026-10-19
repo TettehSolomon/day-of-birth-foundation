@@ -5,7 +5,7 @@ const QUICK_LINKS = ['Contact Us', 'Privacy Policy', 'Terms of Service', 'Donate
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary">
+    <footer className="bg-inverse-surface">
       <div className="w-full py-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-7xl mx-auto">
         <Reveal direction="up" className="space-y-6">
           <img alt="Day of Birth Foundation" className="h-12 brightness-0 invert" src={LOGO_URL} />
@@ -45,7 +45,7 @@ export default function Footer() {
               placeholder="Your email"
               type="email"
             />
-            <button className="bg-[#eb7d4d] text-white px-4 py-2 rounded-xl font-bold">Join</button>
+            <button className="bg-secondary text-white px-4 py-2 rounded-xl font-bold">Join</button>
           </div>
         </Reveal>
       </div>

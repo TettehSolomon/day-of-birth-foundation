@@ -4,8 +4,8 @@
 
 body {
   background-color: #fff8f6;
-  color: #1f1b1a;
-  font-family: 'Work Sans', sans-serif;
+  color: #231f20;
+  font-family: 'Raleway', sans-serif;
   /* Guard against stray horizontal overflow; `clip` (unlike `hidden`)
      does not create a scroll container, so it won't break the sticky header. */
   overflow-x: clip;
@@ -28,6 +28,6 @@ body {
 }
 
 .hero-pattern {
-  background-image: radial-gradient(#339cc5 0.5px, transparent 0.5px);
+  background-image: radial-gradient(#319fcc 0.5px, transparent 0.5px);
   background-size: 24px 24px;
 }

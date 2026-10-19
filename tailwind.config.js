@@ -16,11 +16,13 @@ export default {
         'surface-variant': '#eae1de',
         'tertiary-container': '#9c8f8b',
         'inverse-on-surface': '#f8efed',
-        primary: '#006686',
-        'surface-tint': '#006686',
-        secondary: '#9d4311',
+        // Brand palette (Brand Guidelines 2026)
+        primary: '#319fcc', // Blue
+        'surface-tint': '#319fcc',
+        secondary: '#e97d49', // Peach
+        'inverse-surface': '#231f20', // Black — dark panels
         tertiary: '#675c58',
-        'on-surface': '#1f1b1a',
+        'on-surface': '#231f20', // Black — body text
         background: '#fff8f6',
         'on-primary': '#ffffff',
         outline: '#6f787f',
@@ -44,11 +46,12 @@ export default {
         sm: '12px',
       },
       fontFamily: {
-        'headline-md': ['Plus Jakarta Sans'],
-        'title-lg': ['Plus Jakarta Sans'],
-        'display-lg': ['Plus Jakarta Sans'],
-        'body-md': ['Work Sans'],
-        'label-md': ['Work Sans'],
+        // Brand: Montserrat (primary / headings), Raleway (secondary / body).
+        'headline-md': ['Montserrat', 'sans-serif'],
+        'title-lg': ['Montserrat', 'sans-serif'],
+        'display-lg': ['Montserrat', 'sans-serif'],
+        'body-md': ['Raleway', 'sans-serif'],
+        'label-md': ['Raleway', 'sans-serif'],
       },
       fontSize: {
         'display-lg': ['56px', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
