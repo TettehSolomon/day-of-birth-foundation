@@ -45,8 +45,13 @@ export default function Hero() {
         <Reveal direction="right" delay={200} className="relative">
           <div className="absolute -top-12 -left-12 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10"></div>
           <div className="absolute -bottom-12 -right-12 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -z-10"></div>
-          <div className="rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
             <img alt="CEO Elton" className="w-full h-[500px] object-cover" src={CEO_IMAGE} />
+            <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
+            <div className="absolute bottom-6 left-6 text-white">
+              <p className="font-label-md text-label-md opacity-80 uppercase tracking-widest">Leadership in Action</p>
+              <h3 className="font-title-lg text-title-lg">Energizing the Future Generation</h3>
+            </div>
           </div>
         </Reveal>
       </div>

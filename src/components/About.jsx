@@ -5,7 +5,7 @@ export default function About() {
     <section className="pt-lg pb-xl bg-surface-container/50" id="about">
       <div className="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <Reveal direction="left" className="lg:col-span-5 order-1">
+          <Reveal direction="left" className="lg:col-span-6 order-1">
             <div className="space-y-4">
               <h2 className="font-headline-md text-headline-md text-on-surface text-center lg:text-left">Meet Our Visionary</h2>
               <p className="font-body-md text-body-md text-justify text-tertiary">
@@ -40,18 +40,13 @@ export default function About() {
               </div>
             </div>
           </Reveal>
-          <Reveal direction="right" delay={150} className="lg:col-span-7 order-2">
-            <div className="relative rounded-3xl overflow-hidden aspect-video shadow-xl group">
+          <Reveal direction="right" delay={150} className="lg:col-span-6 order-2">
+            <div className="rounded-3xl overflow-hidden shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500">
               <img
                 alt="CEO Elton, Founder of Day of Birth Foundation"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-[500px] object-cover object-top"
                 src="/images/ceo.jpg"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 text-white">
-                <p className="font-label-md text-label-md opacity-80 uppercase tracking-widest">Leadership in Action</p>
-                <h3 className="font-title-lg text-title-lg">Energizing the Future Generation</h3>
-              </div>
             </div>
           </Reveal>
         </div>
