@@ -31,3 +31,13 @@ body {
   background-image: radial-gradient(#319fcc 0.5px, transparent 0.5px);
   background-size: 24px 24px;
 }
+
+/* Hide scrollbar for the team slider while keeping it scrollable. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -4,9 +4,10 @@ import { LOGO_URL } from '../constants'
 
 const NAV_ITEMS = [
   { label: 'Home', hash: '#home' },
-  { label: 'About', to: '/about' },
+  { label: 'Impact', hash: '#impact' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Videos', to: '/videos' },
+  { label: 'Team', to: '/team' },
   { label: 'Contact', hash: '#contact' },
 ]
 

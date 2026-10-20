@@ -1,5 +1,5 @@
+import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
-import { WhatsAppIcon } from './icons'
 
 const CONTACT_PERSON = 'Ofe'
 const PHONE_DISPLAY = '+234 (902) 932 2866'
@@ -73,15 +73,13 @@ export default function Contact() {
               </a>
             </div>
 
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/meet-our-visionary"
               className="mt-10 flex w-fit mx-auto lg:mx-0 items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface transition-colors relative"
             >
-              <WhatsAppIcon className="w-5 h-5" />
-              Chat on WhatsApp
-            </a>
+              <span className="material-symbols-outlined">person</span>
+              Meet our Visionary
+            </Link>
           </Reveal>
 
           {/* Ways to get involved */}

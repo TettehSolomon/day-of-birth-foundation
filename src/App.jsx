@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Visionary from './pages/Visionary'
 import Gallery from './pages/Gallery'
 import Videos from './pages/Videos'
+import Team from './pages/Team'
 
 export default function App() {
   return (
@@ -13,9 +14,10 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<Visionary />} />
+        <Route path="/meet-our-visionary" element={<Visionary />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/videos" element={<Videos />} />
+        <Route path="/team" element={<Team />} />
       </Routes>
       <Footer />
       <ChatWidget />
