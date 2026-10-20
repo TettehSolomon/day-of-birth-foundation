@@ -1,7 +1,6 @@
 import Reveal from './Reveal'
 
-const CEO_IMAGE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuB32FacZpnz-XxgZRKQNNW4LdJWUTVEjboN3ieJzcE4EIBlsYMtztxHWFLqo2dzYYzQrxErIh61motfyxswd2ywAbnHiypR3cCkD8_TXf4frEs0ONfAJTXqncrtA_efA065Cgv9yFRP4RSazA7sLecEG-NIN1lHr_V_ooI9dMv7i23FK6IcITSqJRbphKr2WZRyvZhD-PwEQSWjPBzQarVZttwU_i7RSO01-es4x-ymNaxJ2TjLAXUlMS17Pt1b175Gpq2kRPiUeYCD'
+const CEO_IMAGE = '/images/img31.jpg'
 
 export default function Hero() {
   return (

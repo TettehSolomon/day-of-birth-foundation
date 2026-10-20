@@ -43,9 +43,9 @@ export default function About() {
           <Reveal direction="right" delay={150} className="lg:col-span-7 order-2">
             <div className="relative rounded-3xl overflow-hidden aspect-video shadow-xl group">
               <img
-                alt="CEO Elton addressing the students"
+                alt="CEO Elton, Founder of Day of Birth Foundation"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="/images/img11.jpg"
+                src="/images/ceo.jpg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent"></div>
               <div className="absolute bottom-6 left-6 text-white">
