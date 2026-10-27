@@ -41,12 +41,17 @@ export default function Donate() {
                   </div>
                 </div>
               </div>
-              <button className="hidden lg:flex bg-white text-primary px-8 py-4 sm:px-10 sm:py-5 rounded-2xl font-extrabold shadow-xl hover:scale-105 hover:bg-surface transition-all items-center gap-3">
+              <a
+                className="hidden lg:inline-flex bg-white text-primary px-8 py-4 sm:px-10 sm:py-5 rounded-2xl font-extrabold shadow-xl hover:scale-105 hover:bg-surface transition-all items-center gap-3"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                   volunteer_activism
                 </span>
                 Donate Now
-              </button>
+              </a>
             </div>
           </Reveal>
           <Reveal direction="right" delay={150} className="lg:col-span-6">
@@ -63,12 +68,17 @@ export default function Donate() {
           </Reveal>
 
           <Reveal direction="up" className="lg:hidden flex justify-center">
-            <button className="flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-2xl font-extrabold shadow-xl hover:scale-105 hover:bg-surface transition-all">
+            <a
+              className="flex items-center gap-3 bg-white text-primary px-8 py-4 rounded-2xl font-extrabold shadow-xl hover:scale-105 hover:bg-surface transition-all"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                 volunteer_activism
               </span>
               Donate Now
-            </button>
+            </a>
           </Reveal>
         </div>
       </div>
