@@ -1,7 +1,14 @@
+import { Link } from 'react-router-dom'
 import { LOGO_URL } from '../constants'
 import Reveal from './Reveal'
 
-const QUICK_LINKS = ['Contact Us', 'Privacy Policy', 'Terms of Service', 'Donate']
+const LINK_CLASS = 'text-surface-variant hover:text-secondary transition-colors font-label-md text-label-md'
+const QUICK_LINKS = [
+  { label: 'Contact Us', href: '#' },
+  { label: 'Privacy Policy', href: '#' },
+  { label: 'Terms of Service', href: '#' },
+  { label: 'FAQ', to: '/faq' },
+]
 
 export default function Footer() {
   return (
@@ -22,14 +29,17 @@ export default function Footer() {
         <Reveal direction="up" delay={120} className="space-y-4">
           <h4 className="font-title-lg text-title-lg text-surface">Quick Links</h4>
           <ul className="space-y-2">
-            {QUICK_LINKS.map((label) => (
-              <li key={label}>
-                <a
-                  className="text-surface-variant hover:text-secondary transition-colors font-label-md text-label-md"
-                  href="#"
-                >
-                  {label}
-                </a>
+            {QUICK_LINKS.map((item) => (
+              <li key={item.label}>
+                {item.to ? (
+                  <Link className={LINK_CLASS} to={item.to}>
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a className={LINK_CLASS} href={item.href}>
+                    {item.label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
