@@ -6,6 +6,7 @@ const VIDEOS = [
   { file: "Joy's Interview.mp4", title: "Joy's Interview" },
   { file: "Emmanuella's Interview.mp4", title: "Emmanuella's Interview" },
   { file: "Mario's interview.mp4", title: "Mario's Interview" },
+  { file: "Samson's Interview.mp4", title: "Samson's Interview" },
   { file: "Last year's Event Recap.mp4", title: "Last Year's Event Recap" },
 ]
 
