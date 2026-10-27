@@ -58,20 +58,45 @@ const FAQS = [
   },
 ]
 
-function FaqItem({ item, isOpen, onToggle }) {
+// Alternating brand accents — Blue (primary) and Peach (secondary), the two
+// colors used throughout the Brand Guidelines deck.
+const ACCENTS = [
+  {
+    bar: 'border-l-primary',
+    chip: 'bg-primary/10 text-primary',
+    icon: 'text-primary',
+    openBg: 'bg-primary/[0.04]',
+  },
+  {
+    bar: 'border-l-secondary',
+    chip: 'bg-secondary/10 text-secondary',
+    icon: 'text-secondary',
+    openBg: 'bg-secondary/[0.05]',
+  },
+]
+
+function FaqItem({ item, index, isOpen, onToggle }) {
+  const accent = ACCENTS[index % ACCENTS.length]
   return (
-    <div className="bg-white rounded-2xl border border-surface-variant shadow-sm overflow-hidden transition-shadow hover:shadow-md">
+    <div
+      className={`rounded-2xl border border-surface-variant border-l-4 ${accent.bar} shadow-sm overflow-hidden transition-all duration-300 hover:shadow-md ${
+        isOpen ? accent.openBg : 'bg-white'
+      }`}
+    >
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="w-full flex items-center justify-between gap-4 text-left px-5 py-4 sm:px-6 sm:py-5"
+        className="w-full flex items-center gap-3 sm:gap-4 text-left px-5 py-4 sm:px-6 sm:py-5"
       >
-        <span className="font-title-lg text-base sm:text-lg font-semibold text-on-surface leading-snug">
+        <span className={`shrink-0 grid place-items-center w-9 h-9 rounded-xl font-bold ${accent.chip}`}>
+          {index + 1}
+        </span>
+        <span className="flex-1 font-title-lg text-base sm:text-lg font-semibold text-on-surface leading-snug">
           {item.q}
         </span>
         <span
-          className={`material-symbols-outlined shrink-0 text-primary transition-transform duration-300 ${
+          className={`material-symbols-outlined shrink-0 transition-transform duration-300 ${accent.icon} ${
             isOpen ? 'rotate-180' : ''
           }`}
         >
@@ -84,7 +109,7 @@ function FaqItem({ item, isOpen, onToggle }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="px-5 pb-5 sm:px-6 sm:pb-6 font-body-md text-body-md text-tertiary">{item.a}</p>
+          <p className="pl-[4.25rem] pr-5 pb-5 sm:pr-6 sm:pb-6 font-body-md text-body-md text-tertiary">{item.a}</p>
         </div>
       </div>
     </div>
@@ -128,7 +153,7 @@ export default function FAQ() {
           <div className="space-y-4">
             {FAQS.map((item, i) => (
               <Reveal key={item.q} direction="up" delay={(i % 5) * 80}>
-                <FaqItem item={item} isOpen={openIndex === i} onToggle={() => toggle(i)} />
+                <FaqItem item={item} index={i} isOpen={openIndex === i} onToggle={() => toggle(i)} />
               </Reveal>
             ))}
           </div>
