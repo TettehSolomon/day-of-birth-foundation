@@ -28,17 +28,21 @@ export default function Hero() {
           <Reveal direction="up" delay={360} className="flex gap-3 sm:gap-4">
             <a
               className="flex-1 sm:flex-none text-center bg-primary text-on-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base shadow-lg hover:translate-y-[-2px] transition-all"
-              href="#donate"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="sm:hidden">Support Us</span>
-              <span className="hidden sm:inline">Support a Student</span>
+              <span className="sm:hidden">Donation</span>
+              <span className="hidden sm:inline">Fund a Scholarship</span>
             </a>
             <a
               className="flex-1 sm:flex-none text-center border-2 border-primary text-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-primary/5 transition-all"
-              href="#impact"
+              href="https://docs.google.com/forms/d/e/1FAIpQLScP8PtGcXygZxx68Kgq0mudGLwxBLRu6T9s4oXigVzgie7vTg/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="sm:hidden">View Impact</span>
-              <span className="hidden sm:inline">View Our Impact</span>
+              <span className="sm:hidden">Volunteer</span>
+              <span className="hidden sm:inline">Join Our Team</span>
             </a>
           </Reveal>
         </div>
