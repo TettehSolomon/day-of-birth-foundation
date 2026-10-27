@@ -63,13 +63,11 @@ const FAQS = [
 const ACCENTS = [
   {
     bar: 'border-l-primary',
-    chip: 'bg-primary/10 text-primary',
     icon: 'text-primary',
     openBg: 'bg-primary/[0.04]',
   },
   {
     bar: 'border-l-secondary',
-    chip: 'bg-secondary/10 text-secondary',
     icon: 'text-secondary',
     openBg: 'bg-secondary/[0.05]',
   },
@@ -89,9 +87,6 @@ function FaqItem({ item, index, isOpen, onToggle }) {
         aria-expanded={isOpen}
         className="w-full flex items-center gap-3 sm:gap-4 text-left px-5 py-4 sm:px-6 sm:py-5"
       >
-        <span className={`shrink-0 grid place-items-center w-9 h-9 rounded-xl font-bold ${accent.chip}`}>
-          {index + 1}
-        </span>
         <span className="flex-1 font-title-lg text-base sm:text-lg font-semibold text-on-surface leading-snug">
           {item.q}
         </span>
@@ -109,7 +104,7 @@ function FaqItem({ item, index, isOpen, onToggle }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="pl-[4.25rem] pr-5 pb-5 sm:pr-6 sm:pb-6 font-body-md text-body-md text-tertiary">{item.a}</p>
+          <p className="px-5 pb-5 sm:px-6 sm:pb-6 font-body-md text-body-md text-justify text-tertiary">{item.a}</p>
         </div>
       </div>
     </div>
