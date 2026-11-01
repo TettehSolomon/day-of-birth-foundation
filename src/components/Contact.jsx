@@ -8,10 +8,30 @@ const EMAIL = 'info@dayofbirthfoundation.org'
 const WHATSAPP_URL = `https://wa.me/${PHONE_E164}`
 
 const INVOLVEMENT = [
-  { icon: 'volunteer_activism', label: 'Donate', desc: 'Fund a student’s tuition and learning materials.' },
-  { icon: 'share', label: 'Share', desc: 'Spread the word and grow our community of givers.' },
-  { icon: 'diversity_3', label: 'Volunteer', desc: 'Give your time, skills, and mentorship.' },
-  { icon: 'handshake', label: 'Partner', desc: 'Collaborate with us on bigger impact.' },
+  {
+    icon: 'volunteer_activism',
+    label: 'Donate',
+    desc: 'Fund a student’s tuition and learning materials.',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform',
+  },
+  {
+    icon: 'share',
+    label: 'Share',
+    desc: 'Spread the word and grow our community of givers.',
+    href: 'https://www.instagram.com/dayofbirthfoundation',
+  },
+  {
+    icon: 'diversity_3',
+    label: 'Volunteer',
+    desc: 'Give your time, skills, and mentorship.',
+    href: 'https://docs.google.com/forms/d/e/1FAIpQLScP8PtGcXygZxx68Kgq0mudGLwxBLRu6T9s4oXigVzgie7vTg/viewform',
+  },
+  {
+    icon: 'handshake',
+    label: 'Partner',
+    desc: 'Collaborate with us on bigger impact.',
+    href: 'https://wa.me/2349029322866',
+  },
 ]
 
 export default function Contact() {
@@ -87,7 +107,12 @@ export default function Contact() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-gutter h-full">
               {INVOLVEMENT.map((item, i) => (
                 <Reveal key={item.label} direction="up" delay={i * 120} className="h-full">
-                  <div className="h-full bg-white rounded-3xl p-6 shadow-sm border border-surface-variant hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col gap-3 items-center text-center sm:items-start sm:text-left">
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block h-full bg-white rounded-3xl p-6 shadow-sm border border-surface-variant hover:-translate-y-1 hover:shadow-md transition-all duration-300 flex flex-col gap-3 items-center text-center sm:items-start sm:text-left"
+                  >
                     <div className="w-12 h-12 flex items-center justify-center bg-secondary/10 text-secondary rounded-2xl">
                       <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>
                         {item.icon}
@@ -95,7 +120,7 @@ export default function Contact() {
                     </div>
                     <h4 className="font-title-lg text-title-lg text-on-surface">{item.label}</h4>
                     <p className="font-body-md text-body-md text-tertiary">{item.desc}</p>
-                  </div>
+                  </a>
                 </Reveal>
               ))}
             </div>
