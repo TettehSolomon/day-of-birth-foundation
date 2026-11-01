@@ -29,7 +29,7 @@ export default function Contact() {
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
           <p className="font-body-md text-body-md text-tertiary max-w-2xl mx-auto">
             Every student deserves the chance to learn and dream. Reach out to support, collaborate, or simply learn
-            more about our mission — your support makes it possible.
+            more about our mission, your support makes it possible.
           </p>
         </Reveal>
 
