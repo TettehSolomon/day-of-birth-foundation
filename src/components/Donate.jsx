@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 
 const FLYER_IMAGE =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuCu-5BG6mc69zCBW4-0NxXzzAeTMawQVh_4ShYzfi0aGb6ccyRbLfjv60ablL2tSZU8jVfhTZ-FJD9cIfrwc5LGQBqYbtazkHBvnJk3FJWh3uruJsmbfEw9iaJplk4u5teeV8kmiL8iKXV0__moSbyX6UsOqYZk850ny75oc1UogpM0JelxogjdxcQYQSPDk_LFW4cdauF0U6zcn3_5m3pBkzknKlEKtJQtVTpkakAToKc8VnJPD4JRRAVap-zipVXjcBDIiJz3OyEt'
+  'images/3m_flier.jpg'
 
 export default function Donate() {
   return (
@@ -25,7 +25,7 @@ export default function Donate() {
                   <div>
                     <h4 className="font-title-lg text-title-lg">Academic Support</h4>
                     <p className="font-body-md text-body-md text-white/80">
-                      30 students will receive 120,000 academic support each for their tuition and materials.
+                      30 students will receive ₦120,000(≃$90) academic support each for their tuition and materials.
                     </p>
                   </div>
                 </div>
@@ -36,7 +36,7 @@ export default function Donate() {
                   <div>
                     <h4 className="font-title-lg text-title-lg">Scholarship Grant</h4>
                     <p className="font-body-md text-body-md text-white/80">
-                      1 beneficiary will receive a life-changing 1,000,000 scholarship grant for higher education.
+                      1 beneficiary will receive a sum of ₦1,000,000(≃$750) scholarship grant for higher education.
                     </p>
                   </div>
                 </div>
