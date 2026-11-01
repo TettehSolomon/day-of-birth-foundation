@@ -38,15 +38,15 @@ const SOCIAL_LINKS = [
 export default function Footer() {
   return (
     <footer className="bg-inverse-surface">
-      <div className="w-full py-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter max-w-7xl mx-auto items-start">
-        <Reveal direction="up" className="space-y-6">
+      <div className="w-full py-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-[1.5fr_0.9fr_1.1fr] gap-gutter max-w-7xl mx-auto items-start">
+        <Reveal direction="up" className="space-y-6 md:justify-self-start">
           <img alt="Day of Birth Foundation" className="h-12 brightness-0 invert" src={LOGO_URL} />
           <p className="font-body-md text-body-md text-surface-variant text-justify">
-            Transforming lives through educational empowerment across Nigeria. Join us in building a future where every
+            We are transforming lives through educational empowerment across Nigeria. Join us in building a future where every
             student has the chance to dream and learn.
           </p>
         </Reveal>
-        <Reveal direction="up" delay={120} className="space-y-4">
+        <Reveal direction="up" delay={120} className="space-y-4 md:justify-self-center">
           <h4 className="font-title-lg text-title-lg text-surface">Quick Links</h4>
           <ul className="space-y-2">
             {QUICK_LINKS.map((item) => (
@@ -64,7 +64,7 @@ export default function Footer() {
             ))}
           </ul>
         </Reveal>
-        <Reveal direction="up" delay={240} className="space-y-4">
+        <Reveal direction="up" delay={240} className="space-y-4 md:justify-self-end">
           <h4 className="font-title-lg text-title-lg text-surface">Connect</h4>
           <div className="flex flex-wrap items-center gap-3 sm:gap-4">
             {SOCIAL_LINKS.map((item) => (
