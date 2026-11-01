@@ -3,6 +3,7 @@ import { WhatsAppIcon } from './icons'
 
 const PHONE_TEL = '+2349029322866'
 const WHATSAPP_URL = 'https://wa.me/2349029322866'
+const EMAIL = 'info@dayofbirthfoundation.org'
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false)
@@ -29,6 +30,13 @@ export default function ChatWidget() {
           className="w-11 h-11 grid place-items-center rounded-full bg-primary text-white hover:-translate-y-0.5 transition-transform"
         >
           <span className="material-symbols-outlined text-[22px]">call</span>
+        </a>
+        <a
+          href={`mailto:${EMAIL}`}
+          aria-label="Email us"
+          className="w-11 h-11 grid place-items-center rounded-full bg-secondary text-white hover:-translate-y-0.5 transition-transform"
+        >
+          <span className="material-symbols-outlined text-[22px]">mail</span>
         </a>
       </div>
 
