@@ -54,12 +54,16 @@ export default function About() {
             </div>
           </Reveal>
           <Reveal direction="right" delay={150} className="lg:col-span-6 order-2">
-            <div className="rounded-3xl overflow-hidden shadow-2xl -rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img
-                alt="CEO Elton, Founder of Day of Birth Foundation"
-                className="w-full h-[500px] object-cover object-top"
-                src="/images/ceo.jpg"
-              />
+            <div className="relative mx-auto max-w-[520px]">
+              <div className="absolute -top-12 -left-10 h-52 w-52 rounded-full bg-secondary/45 blur-[120px] -z-10"></div>
+              <div className="absolute -bottom-12 -right-6 h-56 w-56 rounded-full bg-primary/45 blur-[130px] -z-10"></div>
+              <div className="rounded-[28px] overflow-hidden shadow-[0_30px_80px_rgba(34,35,52,0.18)] border border-white/60 bg-white/20 transition-transform duration-500">
+                <img
+                  alt="CEO Elton, Founder of Day of Birth Foundation"
+                  className="w-full h-[500px] object-cover object-top"
+                  src="/images/ceo.jpg"
+                />
+              </div>
             </div>
           </Reveal>
         </div>

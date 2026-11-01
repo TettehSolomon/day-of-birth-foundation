@@ -11,9 +11,8 @@ export default function ChatWidget() {
   return (
     <div className="fixed right-5 bottom-6 z-[60] flex flex-col items-center gap-3">
       <div
-        className={`flex flex-col gap-2 p-2 rounded-2xl border border-surface-variant bg-white/95 backdrop-blur shadow-xl origin-bottom transition-all duration-200 ${
-          open ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' : 'opacity-0 scale-90 translate-y-2 pointer-events-none'
-        }`}
+        className={`flex flex-col gap-2 p-2 rounded-2xl border border-surface-variant bg-white/95 backdrop-blur shadow-xl origin-bottom transition-all duration-200 ${open ? 'opacity-100 scale-100 translate-y-0 pointer-events-auto' : 'opacity-0 scale-90 translate-y-2 pointer-events-none'
+          }`}
       >
         <a
           href={WHATSAPP_URL}
