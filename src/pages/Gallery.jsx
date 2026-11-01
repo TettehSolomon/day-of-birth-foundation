@@ -34,7 +34,7 @@ export default function Gallery() {
           </Reveal>
           <Reveal direction="up" delay={240}>
             <p className="mt-4 font-body-md text-body-md text-tertiary max-w-2xl mx-auto">
-              A glimpse into the lives we've touched — the smiles, the milestones, and the moments that make our mission
+              A glimpse into the lives we've touched, the smiles, the milestones, and the moments that make our mission
               worth it.
             </p>
           </Reveal>

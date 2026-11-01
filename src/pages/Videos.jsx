@@ -32,7 +32,7 @@ export default function Videos() {
           </Reveal>
           <Reveal direction="up" delay={240}>
             <p className="mt-4 font-body-md text-body-md text-tertiary max-w-2xl mx-auto">
-              Hear it straight from our beneficiaries — their stories, their journeys, and highlights from our events.
+              Hear it straight from our beneficiaries, their stories, their journeys, and highlights from our events.
             </p>
           </Reveal>
         </div>

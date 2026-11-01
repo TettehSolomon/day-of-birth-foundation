@@ -12,7 +12,7 @@ const FAQS = [
         Day Of Birth Impact Youth Education and Empowerment Foundation is a not-for-profit and non-political
         organisation that aims to support children and youth who lack financial access to quality education through
         scholarships, empowerment programmes, and collaborative initiatives. Our purpose is to make quality education
-        more accessible and help students keep moving toward their goals — one future at a time.
+        more accessible and help students keep moving toward their goals, one future at a time.
       </>
     ),
   },
@@ -35,7 +35,7 @@ const FAQS = [
     q: 'What impact has the foundation made so far?',
     a: (
       <>
-        Through our scholarship programme, the foundation has impacted 30 students with ₦3,000,000 to support their
+        Through our scholarship programme, the foundation has impacted 30 students with ₦3,000,000(≃$2200) to support their
         educational journeys. We look forward to supporting 31 more students this year.
       </>
     ),
@@ -44,7 +44,7 @@ const FAQS = [
     q: 'How can I support the foundation?',
     a: (
       <>
-        You can support the foundation in two ways — by{' '}
+        You can support the foundation in two ways: by{' '}
         <a href={VOLUNTEER_FORM} target="_blank" rel="noopener noreferrer" className="text-primary font-semibold underline underline-offset-2 hover:text-secondary transition-colors">
           volunteering your time
         </a>{' '}
