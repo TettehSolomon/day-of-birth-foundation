@@ -26,7 +26,7 @@ export default function Impact() {
           </h2>
           <div className="w-24 h-1 bg-secondary mx-auto rounded-full mb-6"></div>
           <p className="font-body-md text-body-md text-tertiary max-w-2xl mx-auto">
-            Last year, we empowered 30 students with 100k scholarships each. Every smile represents a dream sustained
+            Last year, we empowered 30 students with ₦100,000(≃$75) scholarships each. Every smile represents a dream sustained
             and a future secured.
           </p>
         </Reveal>
