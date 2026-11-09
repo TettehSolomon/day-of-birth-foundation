@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { LOGO_URL } from '../constants'
+import { LOGO_URL, SCHOLARSHIP_URL } from '../constants'
 import { WhatsAppIcon } from './icons'
 import Reveal from './Reveal'
 
@@ -32,6 +32,11 @@ const SOCIAL_LINKS = [
     href: 'https://docs.google.com/forms/d/e/1FAIpQLScP8PtGcXygZxx68Kgq0mudGLwxBLRu6T9s4oXigVzgie7vTg/viewform',
     label: 'Volunteer',
     icon: 'diversity_3',
+  },
+  {
+    href: SCHOLARSHIP_URL,
+    label: 'Apply for Scholarship',
+    icon: 'school',
   },
 ]
 

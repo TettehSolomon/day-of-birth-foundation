@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import { SCHOLARSHIP_URL } from '../constants'
 
 const CEO_IMAGE = '/images/img31.jpg'
 
@@ -37,12 +38,12 @@ export default function Hero() {
             </a>
             <a
               className="flex-1 sm:flex-none text-center border-2 border-primary text-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-primary/5 transition-all"
-              href="https://docs.google.com/forms/d/e/1FAIpQLScP8PtGcXygZxx68Kgq0mudGLwxBLRu6T9s4oXigVzgie7vTg/viewform"
+              href={SCHOLARSHIP_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="sm:hidden">Volunteer</span>
-              <span className="hidden sm:inline">Join Our Team</span>
+              <span className="sm:hidden">Apply</span>
+              <span className="hidden sm:inline">Apply for Scholarship</span>
             </a>
           </Reveal>
         </div>

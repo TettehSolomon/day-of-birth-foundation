@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { LOGO_URL } from '../constants'
+import { LOGO_URL, SCHOLARSHIP_URL } from '../constants'
 
 const NAV_ITEMS = [
   { label: 'Home', hash: '#home' },
@@ -113,6 +113,14 @@ export default function Header() {
               ),
             )}
             <a
+              className="border-2 border-primary text-primary px-6 py-2 rounded-full font-bold hover:bg-primary/5 transition-all duration-150 ease-in-out font-label-md text-label-md"
+              href={SCHOLARSHIP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apply
+            </a>
+            <a
               className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
               href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
               target="_blank"
@@ -198,11 +206,20 @@ export default function Header() {
           })}
 
           <a
+            href={SCHOLARSHIP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+            className="mt-md border-2 border-primary text-primary text-center px-6 py-3 rounded-full font-bold hover:bg-primary/5 transition-all active:scale-95 font-label-md text-label-md"
+          >
+            Apply for Scholarship
+          </a>
+          <a
             href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}
-            className="mt-md bg-secondary text-on-primary text-center px-6 py-3 rounded-full font-bold hover:bg-secondary/90 transition-all active:scale-95 shadow-lg font-label-md text-label-md"
+            className="bg-secondary text-on-primary text-center px-6 py-3 rounded-full font-bold hover:bg-secondary/90 transition-all active:scale-95 shadow-lg font-label-md text-label-md"
           >
             Donate
           </a>
