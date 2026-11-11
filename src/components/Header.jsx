@@ -113,7 +113,7 @@ export default function Header() {
               ),
             )}
             <a
-              className="border-2 border-primary text-primary px-6 py-2 rounded-full font-bold hover:bg-primary/5 transition-all duration-150 ease-in-out font-label-md text-label-md"
+              className="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
               href={SCHOLARSHIP_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -210,7 +210,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={close}
-            className="mt-md border-2 border-primary text-primary text-center px-6 py-3 rounded-full font-bold hover:bg-primary/5 transition-all active:scale-95 font-label-md text-label-md"
+            className="mt-md bg-primary text-on-primary text-center px-6 py-3 rounded-full font-bold hover:bg-primary/90 transition-all active:scale-95 font-label-md text-label-md"
           >
             Apply for Scholarship
           </a>

@@ -37,7 +37,7 @@ export default function Hero() {
               <span className="hidden sm:inline">Fund a Scholarship</span>
             </a>
             <a
-              className="flex-1 sm:flex-none text-center border-2 border-primary text-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:bg-primary/5 transition-all"
+              className="flex-1 sm:flex-none text-center bg-secondary text-on-primary px-4 py-3 sm:px-8 sm:py-4 rounded-xl font-bold text-sm sm:text-base shadow-lg hover:translate-y-[-2px] transition-all"
               href={SCHOLARSHIP_URL}
               target="_blank"
               rel="noopener noreferrer"
