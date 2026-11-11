@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Impact from '../components/Impact'
 import Donate from '../components/Donate'
+import Apply from '../components/Apply'
 import Contact from '../components/Contact'
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Impact />
       <Donate />
+      <Apply />
       <Contact />
     </main>
   )
