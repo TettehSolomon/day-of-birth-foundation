@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { LOGO_URL, SCHOLARSHIP_URL } from '../constants'
-import { WhatsAppIcon } from './icons'
+import { WhatsAppIcon, InstagramIcon, TikTokIcon } from './icons'
 import Reveal from './Reveal'
 
 const LINK_CLASS = 'text-surface-variant hover:text-secondary transition-colors font-label-md text-label-md'
@@ -15,23 +15,17 @@ const SOCIAL_LINKS = [
   {
     href: 'https://www.instagram.com/dayofbirthfoundation',
     label: 'Instagram',
-    icon: 'photo_camera',
+    Icon: InstagramIcon,
+  },
+  {
+    href: 'https://www.tiktok.com/@dayofbirthfoundation',
+    label: 'TikTok',
+    Icon: TikTokIcon,
   },
   {
     href: 'https://wa.me/2349029322866',
     label: 'WhatsApp',
-    icon: 'whatsapp',
-    custom: true,
-  },
-  {
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform',
-    label: 'Donate',
-    icon: 'volunteer_activism',
-  },
-  {
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLScP8PtGcXygZxx68Kgq0mudGLwxBLRu6T9s4oXigVzgie7vTg/viewform',
-    label: 'Volunteer',
-    icon: 'diversity_3',
+    Icon: WhatsAppIcon,
   },
   {
     href: SCHOLARSHIP_URL,
@@ -81,8 +75,8 @@ export default function Footer() {
                 aria-label={item.label}
                 className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-surface-variant transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/60 hover:bg-secondary/10 hover:text-secondary"
               >
-                {item.custom ? (
-                  <WhatsAppIcon className="h-4 w-4 sm:h-5 sm:w-5" />
+                {item.Icon ? (
+                  <item.Icon className="h-4 w-4 sm:h-5 sm:w-5" />
                 ) : (
                   <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
                     {item.icon}

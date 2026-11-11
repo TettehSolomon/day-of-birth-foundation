@@ -1,11 +1,20 @@
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
+import { SCHOLARSHIP_URL } from '../constants'
+import { WhatsAppIcon, InstagramIcon, TikTokIcon } from './icons'
 
 const CONTACT_PERSON = 'Ofe'
 const PHONE_DISPLAY = '+234 (902) 932 2866'
 const PHONE_E164 = '2349029322866'
 const EMAIL = 'info@dayofbirthfoundation.org'
 const WHATSAPP_URL = `https://wa.me/${PHONE_E164}`
+
+const SOCIALS = [
+  { href: 'https://www.instagram.com/dayofbirthfoundation', label: 'Instagram', Icon: InstagramIcon },
+  { href: 'https://www.tiktok.com/@dayofbirthfoundation', label: 'TikTok', Icon: TikTokIcon },
+  { href: WHATSAPP_URL, label: 'WhatsApp', Icon: WhatsAppIcon },
+  { href: SCHOLARSHIP_URL, label: 'Apply for Scholarship', icon: 'school' },
+]
 
 const INVOLVEMENT = [
   {
@@ -91,6 +100,30 @@ export default function Contact() {
                   <p className="font-bold text-sm break-all">{EMAIL}</p>
                 </div>
               </a>
+            </div>
+
+            <div className="mt-8 relative">
+              <p className="font-label-md text-label-md text-white/70 mb-3 text-center lg:text-left">Follow Us</p>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                {SOCIALS.map((item) => (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={item.label}
+                    className="group flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white/80 transition-all duration-200 hover:-translate-y-0.5 hover:border-secondary/60 hover:bg-secondary/10 hover:text-secondary"
+                  >
+                    {item.Icon ? (
+                      <item.Icon className="h-4 w-4 sm:h-5 sm:w-5" />
+                    ) : (
+                      <span className="material-symbols-outlined text-lg sm:text-xl" style={{ fontVariationSettings: "'FILL' 1" }}>
+                        {item.icon}
+                      </span>
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
 
             <Link
