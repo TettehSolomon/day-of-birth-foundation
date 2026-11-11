@@ -112,22 +112,24 @@ export default function Header() {
                 </a>
               ),
             )}
-            <a
-              className="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
-              href={SCHOLARSHIP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apply
-            </a>
-            <a
-              className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Donate
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                className="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
+                href={SCHOLARSHIP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply
+              </a>
+              <a
+                className="bg-secondary text-on-primary px-6 py-2.5 rounded-full font-bold hover:scale-95 transition-all duration-150 ease-in-out font-label-md text-label-md"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf9kuE6xPhG0oS-KoOma_6qAseMhizWSmkyr6F5x5k7KCuO7A/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Donate
+              </a>
+            </div>
           </div>
 
           {/* Animated hamburger → X */}
