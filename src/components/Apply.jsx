@@ -31,7 +31,7 @@ export default function Apply() {
                 APPLICATION ONGOING
               </span>
               <h2 className="hidden sm:block font-display-lg text-3xl sm:text-display-lg-mobile md:font-headline-md md:text-headline-md">
-                Your Future Starts Here: <br />Apply Now
+                Your Future Begins Here: <br />Apply Now
               </h2>
               <div className="space-y-6 sm:space-y-8 mt-8 sm:mt-10">
                 <div className="flex items-start gap-4 sm:gap-5">
